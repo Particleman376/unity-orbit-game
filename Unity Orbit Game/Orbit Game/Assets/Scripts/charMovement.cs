@@ -24,6 +24,7 @@ public class charMovement : MonoBehaviour
         }
 
         transform.Translate(Input.GetAxis("Horizontal") * speed  * Time.deltaTime,Input.GetAxis("Vertical") * speed * Time.deltaTime, 0, Space.World);
+       
 
     }
 
