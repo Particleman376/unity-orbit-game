@@ -5,7 +5,7 @@ using UnityEngine;
 public class satSpawner : MonoBehaviour
 {
     public Transform parent;
-    public Transform startSpot;
+    public Transform satChild;
     Vector3 offset = new Vector3(0, 2, 0);
     int satCount;
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class satSpawner : MonoBehaviour
                     offset = new Vector3(-2, 0, 0);
                     break;
             } */
-            Instantiate(startSpot, GameObject.Find("RotBase").transform.position - offset, Quaternion.identity, parent);
+            Instantiate(satChild, GameObject.Find("RotBase").transform.position - offset, Quaternion.identity, parent);
         }
             
     }
