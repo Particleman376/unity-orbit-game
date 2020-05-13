@@ -6,7 +6,8 @@ public class satSpawner : MonoBehaviour
 {
     public Transform parent;
     public Transform satChild;
-    Vector3 offset = new Vector3(0, 2, 0);
+    public Vector3 orbitDistance = new Vector3(0, 2, 0);
+    Quaternion rotOffset = new Quaternion(0, 0, 90, 0);
     int satCount;
     // Start is called before the first frame update
     void Start()
@@ -19,24 +20,8 @@ public class satSpawner : MonoBehaviour
     {
         if(Input.GetButtonDown("SpawnSat"))
         {
-        /*    satCount += 1;
-            switch(satCount)
-            {
-                case 1:
-                    offset = new Vector3(0, 2, 0);
-                    break;
-                case 2:
-                    offset = new Vector3(0, -2, 0);
-                    break;
-                case 3: 
-                    offset = new Vector3(2, 0, 0);
-                    break;
-                case 4:
-                    offset = new Vector3(-2, 0, 0);
-                    break;
-            } */
-            Instantiate(satChild, GameObject.Find("RotBase").transform.position - offset, Quaternion.identity, parent);
+            Instantiate(satChild, GameObject.Find("RotBase").transform.position - orbitDistance, Quaternion.identity, parent);
         }
-            
+
     }
 }
