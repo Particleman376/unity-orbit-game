@@ -158,11 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43cc016f292bfa4eb4ff953f6ec9e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloneScript: {fileID: 0}
   parent: {fileID: 716355191}
-  satChild: {fileID: 4314335030531813763, guid: 72ff5af1dab24dc419814bc17c553894,
+  satChild: {fileID: 4314335030531813762, guid: 72ff5af1dab24dc419814bc17c553894,
     type: 3}
   satCount: 0
-  rotationOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &716355190
 GameObject:
   m_ObjectHideFlags: 0

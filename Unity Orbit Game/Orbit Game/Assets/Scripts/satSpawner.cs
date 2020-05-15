@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class satSpawner : MonoBehaviour
 {
+    public satRot cloneScript;
     public Transform parent;
-    public Transform satChild;
+    public GameObject satChild;
     float satAngle;
  
     public int satCount = 0;
-    public Quaternion rotationOffset = new Quaternion(0, 0, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +25,11 @@ public class satSpawner : MonoBehaviour
         {     
             satCount ++;
             satAngle = 360 / satCount;
-            rotationOffset = new Quaternion(0, 0, satAngle, 0);
-            print(rotationOffset);
-            Instantiate(satChild,parent.position, parent.rotation * rotationOffset, parent);
+            
+            print(satAngle);
+            GameObject sat;
+            sat = Instantiate(satChild, parent.position, Quaternion.AngleAxis(satAngle, parent.forward), parent);
+            //sat.satNumb = 1;
             //Instantiate(satChild, parent, false);
         }
 
