@@ -21,10 +21,11 @@ public class satRot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Rotate(0, 0, 30 * Time.deltaTime * rotSpeed);
         cloneScript = GameObject.Find("Player").GetComponent<satSpawner>();
         satNumb = cloneScript.satCount;
         steps = satNumb/360;
-          if(Input.GetAxis("SpawnSat") == 1.0f)
+        if(Input.GetAxis("SpawnSat") == 1.0f)
             print(arrNumb);
             transform.rotation = Quaternion.Euler(0, 0, steps * arrNumb);
     }
