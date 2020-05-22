@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class satSpawner : MonoBehaviour
 {
-    public satRot cloneScript;
     public Transform parent;
     public GameObject satChild;
     float satAngle;
