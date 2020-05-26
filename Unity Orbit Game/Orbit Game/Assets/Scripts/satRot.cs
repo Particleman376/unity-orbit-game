@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class satRot : MonoBehaviour
 {
-    int arrNumb = 0;
+    public int arrNumb = 0;
     public int satNumb = 0;
     int satsDown = 0;
-    float steps = 0.0f;
+    public float steps = 0.0f;
     Quaternion goalRot;
+    bool polSwitch = false;
 
     satSpawner cloneScript;
     
@@ -16,24 +17,31 @@ public class satRot : MonoBehaviour
     void Awake()
     {
         cloneScript = GameObject.Find("Player").GetComponent<satSpawner>();
-        arrNumb = cloneScript.satCount;
+        arrNumb = cloneScript.satCount - 1;
         //print(arrNumb);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         cloneScript = GameObject.Find("Player").GetComponent<satSpawner>();
         satNumb = cloneScript.satCount;
-        steps = satNumb/360;
+        steps = 360/satNumb;
         goalRot = Quaternion.Euler(0, 0, steps * arrNumb); //something is wrong here I think
         
 
-        if(Input.GetButtonDown("SpawnSat"))
+        if(Input.GetButtonDown("SpawnSat") )
         {
-            satsDown ++;
-            transform.Rotate(goalRot.eulerAngles);
+            if(arrNumb == 1 & satNumb > 1)
+            {
+                print((goalRot.eulerAngles - transform.eulerAngles).z);
+                transform.Rotate(goalRot.eulerAngles - transform.eulerAngles - (goalRot.eulerAngles * 2));
+            }
+            else
+            {
+                transform.Rotate(goalRot.eulerAngles - transform.eulerAngles);
+            }
+            
         }
             
 

@@ -24,9 +24,9 @@ public class satSpawner : MonoBehaviour
         {     
             satCount ++;
             satAngle = 360 / satCount;
-            angleSat = new Quaternion(0, 0, satAngle, 0);
+            angleSat = Quaternion.Euler(0, 0, satAngle);
             Quaternion actAngle = parent.rotation * angleSat; 
-            print(satAngle);
+            //print(actAngle.eulerAngles);
             GameObject sat;
             sat = Instantiate(satChild, parent.position, actAngle, parent);
             //sat.satNumb = 1;
