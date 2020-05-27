@@ -35,7 +35,7 @@ public class satRot : MonoBehaviour
             if(arrNumb == 1 & satNumb > 1)
             {
                 print((goalRot.eulerAngles - transform.eulerAngles).z);
-                transform.Rotate(goalRot.eulerAngles - transform.eulerAngles - (goalRot.eulerAngles * 2));
+                transform.Rotate(goalRot.eulerAngles - transform.eulerAngles);
             }
             else
             {
