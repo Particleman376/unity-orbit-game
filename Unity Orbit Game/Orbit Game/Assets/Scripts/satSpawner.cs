@@ -6,8 +6,7 @@ public class satSpawner : MonoBehaviour
 {
     public Transform parent;
     public GameObject satChild;
-    float satAngle;
-    Quaternion angleSat;
+    float satAngle = 0.000f;
     public int satCount = 0;
     // Start is called before the first frame update
     void Start()
@@ -24,13 +23,11 @@ public class satSpawner : MonoBehaviour
         {     
             satCount ++;
             satAngle = 360 / satCount;
-            angleSat = Quaternion.Euler(0, 0, satAngle);
-            Quaternion actAngle = parent.rotation * angleSat; 
-            //print(actAngle.eulerAngles);
+            Quaternion offSet = Quaternion.Euler(0, 0, satAngle * (satCount - 1));
+            //print(offSet.eulerAngles);
+            Quaternion actAngle = Quaternion.Euler(parent.rotation.eulerAngles + offSet.eulerAngles); 
             GameObject sat;
             sat = Instantiate(satChild, parent.position, actAngle, parent);
-            //sat.satNumb = 1;
-            //Instantiate(satChild, parent, false);
         }
 
     }

@@ -7,7 +7,7 @@ public class satRot : MonoBehaviour
     public int arrNumb = 0;
     public int satNumb = 0;
     int satsDown = 0;
-    public float steps = 0.0f;
+    public float steps = 0.000f;
     Quaternion goalRot;
     bool polSwitch = false;
 
@@ -22,7 +22,7 @@ public class satRot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         cloneScript = GameObject.Find("Player").GetComponent<satSpawner>();
         satNumb = cloneScript.satCount;
@@ -30,18 +30,14 @@ public class satRot : MonoBehaviour
         goalRot = Quaternion.Euler(0, 0, steps * arrNumb); //something is wrong here I think
         
 
-        if(Input.GetButtonDown("SpawnSat") )
+
+        if(Input.GetButtonDown("SpawnSat"))
         {
-            if(arrNumb == 1 & satNumb > 1)
+            if(arrNumb == (satsDown - 1))
             {
-                print((goalRot.eulerAngles - transform.eulerAngles).z);
-                transform.Rotate(goalRot.eulerAngles - transform.eulerAngles);
-            }
-            else
-            {
-                transform.Rotate(goalRot.eulerAngles - transform.eulerAngles);
-            }
-            
+                print(goalRot.eulerAngles - transform.eulerAngles);
+            } 
+            transform.Rotate(goalRot.eulerAngles - transform.eulerAngles);   
         }
             
 
