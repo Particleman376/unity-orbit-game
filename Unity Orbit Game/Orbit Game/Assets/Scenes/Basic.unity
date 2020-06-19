@@ -158,10 +158,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43cc016f292bfa4eb4ff953f6ec9e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  set: 0
   parent: {fileID: 716355191}
-  satChild: {fileID: 3774206301849698555, guid: b345b0e2facb567468369876c2aaa740,
+  satChild1: {fileID: 4491022475231607122, guid: 9dbc0700a2377874b958aed73ee84f89,
     type: 3}
-  satCount: 0
+  satChild2: {fileID: 7083898050606854681, guid: 70e49ae159c9cd1498289bf8f86c2a56,
+    type: 3}
+  satChild3: {fileID: 8782235140588770105, guid: b8cc88003b26bda4a850876b95aac5e2,
+    type: 3}
+  satChild4: {fileID: 4888726124461792138, guid: e34186aac2fa34b4eb42ccbd26664156,
+    type: 3}
+  satChild5: {fileID: 5763978182683753939, guid: 43ea0c30bb293854691135451d126b71,
+    type: 3}
+  satCount1: 0
+  satCount2: 0
+  satCount3: 0
+  satCount4: 0
+  satCount5: 0
 --- !u!1 &716355190
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f72dd57daa8d1b43af7bd108258dcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 2
+  rotSpeed: 10
 --- !u!1 &832296263
 GameObject:
   m_ObjectHideFlags: 0
