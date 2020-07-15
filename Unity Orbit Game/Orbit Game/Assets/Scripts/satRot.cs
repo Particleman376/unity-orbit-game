@@ -73,7 +73,7 @@ public class satRot : MonoBehaviour
         }
         else if(mySet == 2)
         {
-            transform.Rotate(0, 0, Time.deltaTime * -1);
+            transform.Rotate(0, 0, Time.deltaTime * -600);
         }
         else if(mySet == 3)
         {
