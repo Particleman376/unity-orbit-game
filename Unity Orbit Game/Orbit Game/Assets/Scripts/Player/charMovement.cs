@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class charMovement : MonoBehaviour
 {
+    Vector3 target;
     float timeSinceTouch;
-    int speed = 7;
+    public int speed = 7;
     public Transform targetPos;
     Vector3 goalPos;
+    Vector3 diff;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class charMovement : MonoBehaviour
 
         transform.Translate(Input.GetAxis("Horizontal") * speed  * Time.deltaTime,Input.GetAxis("Vertical") * speed * Time.deltaTime, 0, Space.World);
        
-
+        
     }
 
     void FixedUpdate()

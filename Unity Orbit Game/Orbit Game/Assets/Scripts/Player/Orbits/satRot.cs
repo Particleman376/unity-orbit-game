@@ -55,11 +55,12 @@ public class satRot : MonoBehaviour
                 offSet = 30;
                 break; 
         }
-        steps = 360/satNumb;
-        goalRot = Quaternion.Euler(0, 0, steps * arrNumb + offSet);
+        
 
         if(Input.GetButtonDown("SpawnSat") & mySet == cloneScript.set)
         {
+            steps = 360/satNumb;
+            goalRot = Quaternion.Euler(0, 0, steps * arrNumb + offSet);
             if(arrNumb == (satsDown - 1))
             {
                 print(goalRot.eulerAngles - transform.eulerAngles);

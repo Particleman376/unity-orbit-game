@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
-    public int rotSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,8 +11,8 @@ public class Rotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        transform.Rotate(0, 0, 30 * Time.deltaTime * rotSpeed);
+        
     }
 }
