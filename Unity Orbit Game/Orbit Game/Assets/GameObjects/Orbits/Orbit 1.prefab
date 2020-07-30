@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6403368534734970889}
   - component: {fileID: 5871096313754565166}
-  - component: {fileID: 5788874514804792854}
+  - component: {fileID: 6380822097834858815}
   m_Layer: 0
   m_Name: Orbit 1
   m_TagString: Untagged
@@ -144,7 +144,7 @@ MonoBehaviour:
   arrNumb: 0
   satNumb: 0
   steps: 0
---- !u!114 &5788874514804792854
+--- !u!114 &6380822097834858815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc535f0914fb6c441837b27ffba06a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  sprite1: {fileID: 0}
+  spriteRenderer: {fileID: 4138678166906163902}
+  sprite1: {fileID: 3286163911610860551, guid: 5b5944af3a7772842865015f0f3153ad, type: 3}
   sprite2: {fileID: 0}
   sprite3: {fileID: 0}
   sprite4: {fileID: 0}
