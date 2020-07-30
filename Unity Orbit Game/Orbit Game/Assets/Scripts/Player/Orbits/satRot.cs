@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class satRot : MonoBehaviour
 {
+    public int secondRotationSpeed = 10;
     int offSet = 0;
     int mySet = 0;
     public int arrNumb = 0;
@@ -74,7 +75,7 @@ public class satRot : MonoBehaviour
         }
         else if(mySet == 2)
         {
-            transform.Rotate(0, 0, Time.deltaTime * -600);
+            transform.Rotate(0, 0, Time.deltaTime * -60 * secondRotationSpeed);
         }
         else if(mySet == 3)
         {

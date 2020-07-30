@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Player
+  - Enemy
+  - Satellite
+  - Projectile
+  - Lights
   - 
   - 
   - 
@@ -40,4 +40,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2262433115
+    locked: 0
+  - name: Player
+    uniqueID: 1478662559
+    locked: 0
+  - name: Enemy
+    uniqueID: 824406933
+    locked: 0
+  - name: Satellite
+    uniqueID: 2972943941
+    locked: 0
+  - name: Projectile
+    uniqueID: 2538245185
+    locked: 0
+  - name: Lights
+    uniqueID: 2687682735
     locked: 0
